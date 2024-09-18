@@ -1,0 +1,13 @@
+- type: wireless
+  title: Wireless technologies
+  description: sensors and systems with novel sensing capabilities.
+- type: machine-learning
+  title: Machine learning & graphics
+  description: principled methods for multi-modal learning and sensing.
+- type: digital-health
+  title: Digital health
+  description: contactless health monitoring and digital biomarker discovery.
+- type: robotic-perception
+  title: Robust robotic perception
+  description: robots that continue to sense in adverse conditions.
+# Add more topics as needed

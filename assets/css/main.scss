@@ -1,0 +1,17 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
+@import "bootstrap";
+
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1200px;
+    /* or 950px */
+}
+
+.footer {
+    flex-shrink: 0;
+}

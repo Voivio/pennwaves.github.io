@@ -1,0 +1,54 @@
+---
+layout: main_page
+title: Publications
+years: [2024]
+permalink: /publications/
+---
+
+<h1 class="mt-3">List of Publications</h1>
+
+{% capture under_review_content %}
+  {% bibliography -f ref -q @*[status=under-review] %}
+{% endcapture %}
+
+{% if under_review_content contains '<li>' %}
+  <h2>Under Review</h2>
+  <div class="publications">
+    {{ under_review_content }}
+  </div>
+{% endif %}
+
+{% capture preprint_content %}
+  {% bibliography -f ref -q @*[status=preprint] %}
+{% endcapture %}
+
+{% if preprint_content contains '<li>' %}
+  <h2>Preprints</h2>
+  <div class="publications">
+    {{ preprint_content }}
+  </div>
+{% endif %}
+
+<h2>Published</h2>
+<div class="publications">
+  {%- for y in page.years %}
+    {% capture year_content %}
+      {% bibliography -f ref -q @*[year={{y}} && status=published] %}
+    {% endcapture %}
+    {% if year_content contains '<li>' %}
+      <h3 class="year">{{y}}</h3>
+      {{ year_content }}
+    {% endif %}
+  {% endfor %}
+</div>
+
+<script>
+  function toggleElement(id) {
+    var element = document.getElementById(id);
+    if (element.style.display === "none" || element.style.display === "") {
+      element.style.display = "block";
+    } else {
+      element.style.display = "none";
+    }
+  }
+</script>

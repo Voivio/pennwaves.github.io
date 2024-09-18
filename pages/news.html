@@ -1,0 +1,45 @@
+---
+title: "News"
+layout: main_page
+permalink: /news/
+---
+
+<h1 class="mt-3 mb-4">What's new at WAVES lab?</h1>
+
+<div class="col-sm-12">
+    <ul class="news-list">
+    {% assign news_items = site.data.news | sort: "date" | reverse %}
+    {% for item in news_items %}
+        <li class="news-item">
+            <span class="news-date">{{ item.date | date: "%Y-%m-%d" }}</span>
+            <span class="news-headline">{{ item.headline | markdownify }}</span>
+        </li>
+    {% endfor %}
+    </ul>
+</div>
+
+<style>
+    .news-title {
+        margin-bottom: 2rem; /* Increased margin after the title */
+    }
+    .news-list {
+        list-style-type: none;
+        padding-left: 0;
+    }
+    .news-item {
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: baseline;
+    }
+    .news-date {
+        font-weight: bold;
+        min-width: 100px;
+        margin-right: 1rem;
+    }
+    .news-headline {
+        flex: 1;
+    }
+    .news-headline p {
+        margin: 0;
+    }
+</style>

@@ -1,0 +1,13 @@
+- name: paper
+  icon: bi-file-earmark-text
+  bg_color: primary
+- name: code
+  icon: bi-code-square
+  bg_color: success
+- name: slides
+  icon: bi-easel
+  bg_color: info
+- name: video
+  icon: bi-play-circle
+  bg_color: danger
+# Add more asset types as needed

@@ -1,0 +1,27 @@
+---
+---
+<!-- _layouts/bib.html -->
+<div class="row">
+  <div id="{{entry.key}}" class="col-sm-12">
+    {{ reference }}
+    
+    <br />
+    <div class="button-group" style="margin-top: 10px;">
+        {% if entry.doi %}
+          <a href="https://doi.org/{{ entry.doi }}" target="_blank"><button class="btn btn-sm btn-primary z-depth-0" role="button">DOI</button></a>
+        {% endif %}
+  
+        {% if entry.arxiv %}
+          <a href="https://arxiv.org/abs/{{ entry.arxiv }}" target="_blank"><button class="btn btn-sm btn-success z-depth-0" role="button">arXiv</button></a>
+        {% endif %}
+  
+        <button onclick="toggleElement('{{entry.key}}-bibtex')" class="btn btn-sm btn-warning z-depth-0" type="button">BibTeX</button>
+    </div>
+
+    <div id="{{entry.key}}-bibtex" style="display: none;">
+      <div class="card card-body">
+        <pre><code>{{ entry.bibtex }}</code></pre>
+      </div>
+    </div>
+  </div>
+</div>

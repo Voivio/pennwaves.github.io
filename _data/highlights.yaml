@@ -1,0 +1,12 @@
+# _data/highlights.yaml
+
+- headline: "Welcome to the WAVES Lab Website!"
+  description: "We are a research group at the University of Pennsylvania, delving into the fascinating world of imperceptible signals."
+  img_link: "/assets/images/wireless-sensing.jpg"
+  hyperlink: "/research/"
+
+# you can add more highlights here in the future, for example:
+# - headline: "Collaborative Project on Smart Home Sensing"
+#   description: "In partnership with leading tech companies, we're developing a comprehensive smart home sensing system that enhances energy efficiency and resident comfort."
+#   img_link: "/assets/images/smart-home.jpg"
+#   hyperlink: "/projects/smart-home/"

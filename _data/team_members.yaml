@@ -1,0 +1,119 @@
+- name: Mingmin Zhao
+  photo: mingmin_zhao.jpg
+  category: faculty
+  info: Assistant Professor
+  email: mingminz@seas.upenn.edu
+  website: https://www.cis.upenn.edu/~mingminz/
+  destination: null
+
+- name: Xin Yang
+  photo: xin_yang.jpeg
+  category: postdoc
+  info: PostDoc
+  email: xinya@seas.upenn.edu
+  website: null
+  destination: null
+
+- name: Haowen Lai
+  photo: haowen_lai.png
+  category: phd
+  info: 3rd year from CIS department
+  email: hwlai@seas.upenn.edu
+  website: https://haowenlai.github.io/
+  destination: null
+
+- name: Dongyin Hu
+  photo: dongyin_hu.jpg
+  category: phd
+  info: 2nd year from CIS department
+  email: dyhu@seas.upenn.edu
+  website: null
+  destination: null
+
+- name: Zitong Lan
+  photo: zitong_lan.jpeg
+  category: phd
+  info: 2nd year from ESE department
+  email: ztlan@seas.upenn.edu
+  website: https://zitonglan.github.io/
+  destination: null
+
+- name: Zhiwei Zheng
+  photo: zhiwei_zheng.png
+  category: phd
+  info: 1st year from ESE department
+  email: zhiweiz@seas.upenn.edu
+  website: null
+  destination: null
+
+- name: Yiduo Hao
+  photo: yiduo_hao.jpeg
+  category: phd
+  info: 1st year from CIS department
+  email: yiduohao@seas.upenn.edu
+  website: null
+  destination: null
+
+- name: Ahhyun Yuh
+  photo: ahhyun_yuh.jpg
+  category: phd
+  info: 3rd year from CIS department
+  email: lucy0820@seas.upenn.edu
+  website: null
+  destination: null
+
+- name: Freddy Liu
+  photo: freddy_liu.jpeg
+  category: undergrad
+  info: Junior Undergrad from CIS department
+  email: freddy6@seas.upenn.edu
+  website: null
+  destination: null
+
+- name: Jonathan Pei
+  photo: jonathan_pei.jpg
+  category: alumni
+  info: Undergrad Intern 2024, Math & CIS UPenn
+  email: null
+  website: null
+  destination: null
+
+- name: Chenhao Zheng
+  photo: chenhao_zheng.jpg
+  category: alumni
+  info: Intern, 2024
+  email: null
+  website: null
+  destination: PhD at University of Washington
+
+- name: Gaoxiang Luo
+  photo: gaoxiang_luo.jpg
+  category: alumni
+  info: Master, 2023
+  email: null
+  website: null
+  destination: PhD at University of Minnesota
+
+- name: Zihao Wang
+  photo: zihao_wang.jpg
+  category: alumni
+  info: Master, 2024
+  email: null
+  website: null
+  destination: Engineer at Rivos Inc.
+
+- name: Yiqiao Liao
+  photo: yiqiao_liao.jpg
+  category: alumni
+  info: Master, 2023
+  email: null
+  website: null
+  destination: PhD at UCSD
+
+- name: Yuxin Wang
+  photo: yuxin_wang.jpg
+  category: alumni
+  info: Master, 2023
+  email: null
+  website: null
+  destination: PhD at University of Delaware

@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+      <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24"
+        class="d-inline-block align-text-top">
+      WAVES Lab
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link{% if page.title | downcase contains 'home' %} active{% endif %}" aria-current="page"
+            href="{{ site.url }}{{ site.baseurl }}/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{% if page.title | downcase contains 'research' %} active{% endif %}"
+            href="{{ site.url }}{{ site.baseurl }}/research">Research</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{% if page.title | downcase contains 'publications' %} active{% endif %}"
+            href="{{ site.url }}{{ site.baseurl }}/publications">Publications</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{% if page.title | downcase contains 'team' %} active{% endif %}"
+            href="{{ site.url }}{{ site.baseurl }}/team">Team</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{% if page.title | downcase contains 'contact' %} active{% endif %}"
+            href="{{ site.url }}{{ site.baseurl }}/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

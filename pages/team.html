@@ -1,0 +1,113 @@
+---
+title: "Team"
+layout: main_page
+permalink: /team/
+---
+
+<h1 class="mt-3">Team Members</h1>
+
+<div class="col-sm-12">
+
+    {% assign members = site.data.team_members | sort: "name" %}
+
+    <h2>Faculty</h2>
+    <div class="row">
+        {% for member in members %}
+        {% if member.category == "faculty" %}
+        <div class="col-sm-6 col-md-4 mb-4">
+            {% include current_member.html %}
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <h2>PostDoc</h2>
+    <div class="row">
+        {% for member in members %}
+        {% if member.category == "postdoc" %}
+        <div class="col-sm-6 col-md-4 mb-4">
+            {% include current_member.html %}
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <h2>PhD Students</h2>
+    <div class="row">
+        {% for member in members %}
+        {% if member.category == "phd" %}
+        <div class="col-sm-6 col-md-4 mb-4">
+            {% include current_member.html %}
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <h2>Master Students</h2>
+    <div class="row">
+        {% for member in members %}
+        {% if member.category == "master" %}
+        <div class="col-sm-6 col-md-4 mb-4">
+            {% include current_member.html %}
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <h2>Undergraduate Students</h2>
+    <div class="row">
+        {% for member in members %}
+        {% if member.category == "undergrad" %}
+        <div class="col-sm-6 col-md-4 mb-4">
+            {% include current_member.html %}
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <h2>Alumni</h2>
+    <ul class="list-unstyled alumni-list">
+        {% for member in members %}
+        {% if member.category == "alumni" %}
+        <li class="alumni-item">
+            <span class="alumni-name">{{ member.name }}</span>
+            <span class="alumni-info">{{ member.info }}</span>
+            {% if member.destination %}
+            <span class="alumni-destination">Current: {{ member.destination }}</span>
+            {% endif %}
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</div>
+
+
+<style>
+    .alumni-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .alumni-item {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .alumni-name {
+        font-weight: bold;
+        margin-right: 5px;
+    }
+
+    .alumni-info {
+        margin-right: 5px;
+    }
+
+    .alumni-destination {
+        color: #666;
+        font-style: italic;
+    }
+</style>

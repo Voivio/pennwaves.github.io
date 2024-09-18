@@ -1,0 +1,80 @@
+---
+layout: main_page
+title: Research
+permalink: /research/
+---
+
+<h1 class="mt-3">{{ page.title }}</h1>
+
+<!-- Research Interests and Topics -->
+<h2 class="mb-3">Research Interests</h2>
+<ul>
+  {% for topic in site.data.research.valid_topics %}
+  {% assign topic_projects = site.projects | where: "topic", topic.type | where: "visible", true | sort: "date" |
+  reverse %}
+  <li>
+    {% if topic_projects.size > 0 %}
+    <strong><a href="#{{ topic.type | slugify }}">{{ topic.title }}:</a></strong>
+    {% else %}
+    <strong>{{ topic.title }}:</strong>
+    {% endif %}
+    {{ topic.description }}
+  </li>
+  {% endfor %}
+</ul>
+
+<!-- Projects by Topic -->
+{% for topic in site.data.research.valid_topics %}
+{% assign topic_projects = site.projects | where: "topic", topic.type | where: "visible", true | sort: "date" | reverse
+%}
+{% if topic_projects.size > 0 %}
+<h2 id="{{ topic.type | slugify }}" class="mt-5 mb-4">{{ topic.title }}</h2>
+{% for project in topic_projects %}
+<div class="card mb-4">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{{ project.teaser }}" class="img-fluid rounded-start" alt="{{ project.title }} teaser">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">
+          {% if project.name %}{{ project.name | capitalize | replace: '-', ' ' }}: {% endif %}{{ project.title }}
+        </h5>
+
+        <div class="mt-3">
+          {% for asset in project.assets %}
+          {% assign asset_type = asset[0] %}
+          {% assign asset_link = asset[1] %}
+          {% assign valid_asset = site.data.research.valid_asset_types | where: "name", asset_type | first %}
+          {% if valid_asset %}
+          <a href="{{ asset_link }}" class="badge bg-{{ valid_asset.bg_color }} text-decoration-none">
+            <i class="bi {{ valid_asset.icon }}"></i> {{ asset_type | capitalize }}
+          </a>
+          {% endif %}
+          {% endfor %}
+
+          <a href="{{ project.project_page }}" class="float-end text-muted">
+            <i class="bi bi-globe"></i> Project Page
+          </a>
+        </div>
+
+        <p class="card-text">{{ project.description | markdownify }}</p>
+
+        {% if project.awards and project.awards.size > 0 %}
+        <div class="mt-3">
+          <strong>Awards:</strong>
+          <ul>
+            {% for award in project.awards %}
+              <li>{{ award }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+{% endif %}
+{% endfor %}
